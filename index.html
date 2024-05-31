@@ -113,6 +113,114 @@
     <div class="bottom-right-text">ButteryPancakes2024</div>
 </body>
 
+
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .toggle {
+            cursor: pointer;
+            color: #4CAF50;
+        }
+        .toggle:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <h2 id="formTitle">Login</h2>
+        <form id="loginForm">
+            <input type="text" id="loginUsername" placeholder="Username" required><br>
+            <input type="password" id="loginPassword" placeholder="Password" required><br>
+            <button type="button" onclick="login()">Login</button>
+            <p class="toggle" onclick="toggleForm()">Don't have an account? Sign up</p>
+        </form>
+        <form id="signupForm" style="display:none;">
+            <input type="text" id="signupUsername" placeholder="Username" required><br>
+            <input type="email" id="signupEmail" placeholder="Email" required><br>
+            <input type="password" id="signupPassword" placeholder="Password" required><br>
+            <button type="button" onclick="signup()">Sign Up</button>
+            <p class="toggle" onclick="toggleForm()">Already have an account? Login</p>
+        </form>
+    </div>
+
+    <script>
+        function toggleForm() {
+            var loginForm = document.getElementById('loginForm');
+            var signupForm = document.getElementById('signupForm');
+            var formTitle = document.getElementById('formTitle');
+            if (loginForm.style.display === 'none') {
+                loginForm.style.display = 'block';
+                signupForm.style.display = 'none';
+                formTitle.innerText = 'Login';
+            } else {
+                loginForm.style.display = 'none';
+                signupForm.style.display = 'block';
+                formTitle.innerText = 'Sign Up';
+            }
+        }
+
+        function login() {
+            var username = document.getElementById('loginUsername').value;
+            var password = document.getElementById('loginPassword').value;
+            // Add your authentication logic here
+            alert('Login attempt for username: ' + username);
+        }
+
+        function signup() {
+            var username = document.getElementById('signupUsername').value;
+            var email = document.getElementById('signupEmail').value;
+            var password = document.getElementById('signupPassword').value;
+            // Add your registration logic here
+            alert('Signup attempt for username: ' + username + ' and email: ' + email);
+        }
+    </script>
+    
+</body>
+    
 </html>
 
 
