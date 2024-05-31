@@ -93,7 +93,6 @@
             <a href="https://slicic.github.io/ButteryPancakes/HowThisSiteWorks.html" class="button">How this site works</a>
         </div>
     </div>
-</body>
 
     <style>
         .bottom-right-text {
@@ -113,12 +112,7 @@
     <div class="bottom-right-text">ButteryPancakes2024</div>
 </body>
 
-
-    
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login/Signup Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -129,7 +123,10 @@
             height: 100vh;
             margin: 0;
         }
-        .container {
+        .form-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
@@ -170,7 +167,7 @@
     </style>
 </head>
 <body>
-    <div class="container" id="container">
+    <div class="form-container" id="container">
         <h2 id="formTitle">Login</h2>
         <form id="loginForm">
             <input type="text" id="loginUsername" placeholder="Username" required><br>
@@ -218,9 +215,5 @@
             alert('Signup attempt for username: ' + username + ' and email: ' + email);
         }
     </script>
-    
 </body>
-    
 </html>
-
-
